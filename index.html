@@ -3,15 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Store — 5Ner</title>
-<meta name="description" content="Pixel art store by 5Ner. Buy exclusive animated GIFs for USDT.">
-<meta property="og:title" content="Store — 5Ner">
-<meta property="og:description" content="Buy exclusive pixel art GIFs for USDT. Safe, fast and no fees.">
+<title>Support — 5Ner</title>
+<meta name="description" content="Support the author 5Ner with USDT.">
+<meta property="og:title" content="Support — 5Ner">
+<meta property="og:description" content="Support the author with USDT. Safe, fast and no fees.">
 <meta property="og:type" content="website">
-<link rel="preload" as="image" href="tron.jpg">
-<link rel="preload" as="image" href="bnb.jpg">
-<link rel="preload" as="image" href="etherium.jpg">
-<link rel="preload" as="image" href="solana.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -33,79 +29,55 @@ body {
     width: 100%;
     max-width: 100vw;
 }
-body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); z-index: -1; }
-.header-row { display: flex; align-items: center; justify-content: center; gap: 3vw; margin-bottom: 2vh; width: 100%; max-width: 96vw; }
+body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.75); z-index: -1; }
+
+.header-row { display: flex; align-items: center; justify-content: center; gap: 3vw; margin-bottom: 5vh; width: 100%; max-width: 96vw; }
 .avatar { width: clamp(3.2rem, 13vw, 5rem); height: clamp(3.2rem, 13vw, 5rem); border-radius: 50%; object-fit: cover; object-position: center; box-shadow: 0 0 22px rgba(255,255,255,0.55); overflow: hidden; background: #000; flex-shrink: 0; image-rendering: pixelated; }
 h1 { font-family: 'Press Start 2P', monospace; font-size: clamp(1.4rem, 7vw, 2.6rem); text-shadow: 0 0 14px rgba(255,255,255,0.6); letter-spacing: 0.1em; }
-.led-row { display: flex; align-items: center; gap: 2vw; width: 100%; max-width: 96vw; margin-bottom: 3vh; justify-content: flex-start; flex-wrap: nowrap; }
-.led-marquee { flex: 1; min-width: 0; height: clamp(2.6rem, 9vw, 4rem); background: #000; border: 2px solid #0a1a0a; border-radius: 0.5rem; overflow: hidden; position: relative; box-shadow: inset 0 0 14px rgba(0, 255, 0, 0.18), 0 0 20px rgba(0, 255, 0, 0.32); }
-.led-marquee::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: repeating-linear-gradient(0deg, rgba(0,0,0,0.45) 0px, rgba(0,0,0,0.45) 1px, transparent 1px, transparent 4px); pointer-events: none; z-index: 3; }
-.led-marquee::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: repeating-linear-gradient(90deg, rgba(0,0,0,0.45) 0px, rgba(0,0,0,0.45) 1px, transparent 1px, transparent 4px); pointer-events: none; z-index: 3; }
-.led-text { 
-    font-family: 'Share Tech Mono', 'Courier New', monospace; 
-    font-size: clamp(1.1rem, 3.5vw, 1.6rem); 
-    font-weight: 700; 
-    color: #39ff14; 
-    text-shadow: 0 0 4px #39ff14, 0 0 10px #39ff14, 0 0 20px rgba(57, 255, 20, 0.6); 
-    white-space: nowrap; 
-    position: absolute; 
-    top: 50%; 
-    left: 0; 
-    transform: translateY(-50%); 
-    animation: ledScroll 20s linear infinite; 
-    letter-spacing: 0.05em; 
-    padding-left: 100%; 
-    z-index: 2; 
-}
-@keyframes ledScroll { 0% { transform: translate(0, -50%); } 100% { transform: translate(-100%, -50%); } }
 
-/* ================= FIX ДЛЯ IPHONE (Убираем свечение и сглаживание) ================= */
-@media only screen and (max-width: 430px) and (-webkit-min-device-pixel-ratio: 3) {
-    .led-text {
-        text-shadow: none !important; /* Полностью убираем размытие */
-        -webkit-font-smoothing: none !important; /* Отключаем сглаживание Safari */
-        letter-spacing: -0.02em; /* Чуть сжимаем буквы, чтобы шрифт был плотнее */
-    }
+/* Support Widget Box */
+.support-widget {
+    background: #0a0a0a;
+    border: 2px solid #39ff14;
+    border-radius: 14px;
+    padding: 4vw;
+    width: 100%;
+    max-width: min(92vw, 480px);
+    text-align: center;
+    box-shadow: 0 0 35px rgba(57, 255, 20, 0.4);
+    position: relative;
+    margin-bottom: 4vh;
 }
-/* ============================================================================== */
 
-.arrow-to-rules { display: flex; align-items: center; justify-content: center; cursor: pointer; user-select: none; flex-shrink: 0; height: clamp(2.6rem, 9vw, 4rem); animation: arrowBounce 1.2s ease-in-out infinite; }
-.arrow-to-rules svg { width: clamp(1.8rem, 7vw, 3rem); height: clamp(1.8rem, 7vw, 3rem); filter: drop-shadow(0 0 6px #39ff14) drop-shadow(0 0 12px #39ff14); }
-.arrow-to-rules svg polygon { fill: #39ff14; }
-@keyframes arrowBounce { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(0.5vw); } }
-.rules-btn { font-family: 'Press Start 2P', monospace; font-size: clamp(0.55rem, 2.2vw, 0.9rem); background: #39ff14; color: #000; border: none; padding: 0 3vw; height: clamp(2.6rem, 9vw, 4rem); border-radius: 0.6rem; cursor: pointer; letter-spacing: 0.05em; box-shadow: 0 0 18px rgba(57, 255, 20, 0.6); animation: rulesPulse 1.5s ease-in-out infinite; flex-shrink: 0; text-transform: uppercase; }
-@keyframes rulesPulse { 0%, 100% { box-shadow: 0 0 18px rgba(57,255,20,0.6); transform: scale(1); } 50% { box-shadow: 0 0 32px rgba(57,255,20,1), 0 0 55px rgba(57,255,20,0.6); transform: scale(1.04); } }
-.rules-panel { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.95); z-index: 300; align-items: center; justify-content: center; padding: 3vw; }
-.rules-panel.active { display: flex; }
-.rules-panel .rules-box { background: #1a1a1a; border: 2px solid #39ff14; border-radius: 12px; padding: 4vw 5vw; width: 100%; max-width: min(92vw, 520px); max-height: 84vh; overflow-y: auto; box-shadow: 0 0 30px rgba(57, 255, 20, 0.4); text-align: left; }
-.rules-panel .rules-box h2 { font-family: 'Press Start 2P', monospace; font-size: clamp(0.7rem, 3vw, 1rem); color: #39ff14; margin-bottom: 3vh; line-height: 1.6; text-align: center; letter-spacing: 0.1em; }
-.rules-panel .rules-box p { font-family: 'VT323', monospace; font-size: clamp(1rem, 4.5vw, 1.35rem); color: #cccccc; line-height: 1.4; margin-bottom: 1.5vh; }
-.rules-panel .rules-box p strong { color: #39ff14; font-weight: normal; }
-.rules-panel .rules-box ul { list-style: none; margin: 0 0 1.5vh 0; padding-left: 0; }
-.rules-panel .rules-box ul li { font-family: 'VT323', monospace; font-size: clamp(1rem, 4.5vw, 1.35rem); color: #cccccc; line-height: 1.4; margin-bottom: 0.8vh; padding-left: 1.2em; position: relative; }
-.rules-panel .rules-box ul li::before { content: '>'; color: #39ff14; position: absolute; left: 0; font-family: 'Share Tech Mono', monospace; }
-.rules-panel .rules-box .email-link { color: #39ff14; text-decoration: none; border-bottom: 1px solid #39ff14; }
-.rules-panel .rules-close { display: block; margin: 3vh auto 0; background: transparent; border: 2px solid #ff4444; color: #ff4444; font-family: 'Press Start 2P', monospace; font-size: clamp(0.5rem, 2vw, 0.7rem); cursor: pointer; padding: 1.5vh 5vw; border-radius: 30px; transition: all 0.3s ease; letter-spacing: 0.05em; }
-.rules-panel .rules-close:hover { background: #ff4444; color: #000; }
-.works-carousel { width: 100%; max-width: min(92vw, 480px); margin: 0 auto 4vh auto; position: relative; }
-.work-slide { display: none; flex-direction: column; align-items: center; animation: workFadeIn 0.5s ease; width: 100%; }
-.work-slide.active { display: flex; }
-@keyframes workFadeIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
-.work-image-wrap { width: 100%; max-width: min(92vw, 480px); border: 3px solid #39ff14; border-radius: 12px; overflow: hidden; box-shadow: 0 0 25px rgba(57, 255, 20, 0.5); background: #000; }
-.work-image-wrap img { display: block; width: 100%; height: auto; }
-.work-title { font-family: 'Press Start 2P', monospace; font-size: clamp(0.55rem, 2.5vw, 0.9rem); color: #ffffff; text-align: center; margin-top: 2vh; margin-bottom: 1.5vh; letter-spacing: 0.05em; line-height: 1.4; text-shadow: 0 0 8px rgba(255,255,255,0.4); }
-.work-buy-btn { font-family: 'Press Start 2P', monospace; font-size: clamp(0.6rem, 2.5vw, 0.85rem); background: #39ff14; color: #000; border: none; padding: 2vh 8vw; border-radius: 10px; cursor: pointer; letter-spacing: 0.1em; text-transform: uppercase; transition: all 0.3s ease; box-shadow: 0 0 18px rgba(57, 255, 20, 0.5); }
-.work-buy-btn:hover { background: #fff; box-shadow: 0 0 30px rgba(57,255,20,0.9); transform: scale(1.05); }
-.work-buy-btn:active { transform: scale(0.98); }
-.pay-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.95); z-index: 250; align-items: center; justify-content: center; padding: 3vw; overflow-y: auto; }
-.pay-modal.active { display: flex; }
-.pay-box { background: #0a0a0a; border: 2px solid #39ff14; border-radius: 14px; padding: 4vw; width: 100%; max-width: min(92vw, 440px); text-align: center; box-shadow: 0 0 35px rgba(57, 255, 20, 0.5); position: relative; }
-.pay-close { position: absolute; top: 1.5vh; right: 3vw; background: #ff4444; border: 2px solid #ff4444; color: #fff; font-family: 'Press Start 2P', monospace; font-size: clamp(0.7rem, 3vw, 0.9rem); cursor: pointer; z-index: 20; width: clamp(1.8rem, 7vw, 2.4rem); height: clamp(1.8rem, 7vw, 2.4rem); border-radius: 50%; display: flex; align-items: center; justify-content: center; padding: 0; }
-.pay-close:hover { background: #fff; color: #ff4444; }
-.pay-title { font-family: 'Press Start 2P', monospace; font-size: clamp(0.6rem, 2.6vw, 0.9rem); color: #39ff14; margin-bottom: 1.5vh; line-height: 1.5; padding-right: 8vw; }
-.pay-sub { font-family: 'VT323', monospace; font-size: clamp(1rem, 4vw, 1.3rem); color: #cccccc; margin-bottom: 2vh; letter-spacing: 0.05em; }
-.pay-tokens { display: flex; gap: 2vw; justify-content: center; margin-bottom: 2.5vh; flex-wrap: nowrap; }
-.pay-token { position: relative; width: clamp(3.2rem, 13vw, 4.5rem); height: clamp(3.2rem, 13vw, 4.5rem); cursor: pointer; flex-shrink: 0; transition: transform 0.3s ease; -webkit-tap-highlight-color: transparent; }
+/* Кнопка закрытия QR */
+.close-qr-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ff4444;
+    border: 2px solid #ff4444;
+    color: #fff;
+    font-family: 'Press Start 2P', monospace;
+    font-size: clamp(0.6rem, 2.5vw, 0.8rem);
+    width: clamp(1.8rem, 6vw, 2.2rem);
+    height: clamp(1.8rem, 6vw, 2.2rem);
+    border-radius: 50%;
+    cursor: pointer;
+    display: none; /* Скрыт по умолчанию */
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+.close-qr-btn:hover { background: #fff; color: #ff4444; }
+.close-qr-btn.active { display: flex; }
+
+.pay-title { font-family: 'Press Start 2P', monospace; font-size: clamp(0.6rem, 2.8vw, 0.9rem); color: #39ff14; margin-bottom: 2vh; line-height: 1.6; }
+.pay-sub { font-family: 'VT323', monospace; font-size: clamp(1.1rem, 4.5vw, 1.4rem); color: #cccccc; margin-bottom: 3vh; letter-spacing: 0.05em; }
+
+.pay-tokens { display: flex; gap: 3vw; justify-content: center; margin-bottom: 3vh; flex-wrap: nowrap; }
+.pay-token { position: relative; width: clamp(3.5rem, 15vw, 5rem); height: clamp(3.5rem, 15vw, 5rem); cursor: pointer; flex-shrink: 0; transition: transform 0.3s ease; -webkit-tap-highlight-color: transparent; }
 .pay-token img { display: block; width: 100%; height: 100%; object-fit: contain; opacity: 0.35; transition: opacity 0.5s ease, filter 0.5s ease; border-radius: 50%; }
 .pay-token.lit img { opacity: 1; filter: drop-shadow(0 0 8px var(--color)) drop-shadow(0 0 18px var(--color)) drop-shadow(0 0 30px var(--color)); }
 .pay-token.active img { opacity: 1; filter: drop-shadow(0 0 10px var(--color)) drop-shadow(0 0 22px var(--color)) drop-shadow(0 0 38px var(--color)); }
@@ -113,32 +85,27 @@ h1 { font-family: 'Press Start 2P', monospace; font-size: clamp(1.4rem, 7vw, 2.6
 .pay-token.bnb { --color: #FCC703; }
 .pay-token.eth { --color: #2D6EFA; }
 .pay-token.sol { --color: #20E88B; }
+
 .pay-token .lightning { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 5; pointer-events: none; overflow: hidden; opacity: 0; border-radius: 50%; }
 .pay-token .lightning::before { content: ''; position: absolute; top: -20%; left: -50%; width: 25%; height: 140%; background: linear-gradient(90deg, transparent 0%, var(--color) 30%, #ffffff 50%, var(--color) 70%, transparent 100%); filter: blur(4px); transform: skewX(-12deg); }
 .pay-token.zap .lightning { opacity: 1; }
 .pay-token.zap .lightning::before { animation: sweepLightning 0.9s ease-in-out forwards; }
 @keyframes sweepLightning { 0% { left: -50%; opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { left: 130%; opacity: 0; } }
-.pay-qr-wrap { display: none; flex-direction: column; align-items: center; width: 100%; }
+
+.pay-qr-wrap { display: none; flex-direction: column; align-items: center; width: 100%; animation: workFadeIn 0.4s ease; }
 .pay-qr-wrap.active { display: flex; }
-.pay-qr { background: #fff; padding: 1.5vw; border-radius: 14px; margin-bottom: 2vh; position: relative; width: clamp(11rem, 60vw, 15rem); height: clamp(11rem, 60vw, 15rem); display: flex; align-items: center; justify-content: center; }
+@keyframes workFadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+.pay-qr { background: #fff; padding: 1.5vw; border-radius: 14px; margin-bottom: 2vh; position: relative; width: clamp(12rem, 65vw, 16rem); height: clamp(12rem, 65vw, 16rem); display: flex; align-items: center; justify-content: center; }
 .pay-qr img { display: none; width: 100%; height: 100%; object-fit: contain; }
 .pay-qr img.active { display: block; }
-.pay-address { font-family: 'VT323', monospace; font-size: clamp(0.8rem, 3.2vw, 1.05rem); color: #ccc; word-break: break-all; margin-bottom: 2vh; max-width: 90%; line-height: 1.3; text-align: center; }
-.pay-copy { background: transparent; border: 2px solid #39ff14; color: #39ff14; font-family: 'Press Start 2P', monospace; font-size: clamp(0.5rem, 2vw, 0.65rem); padding: 1.5vh 6vw; border-radius: 24px; cursor: pointer; margin-bottom: 2vh; transition: all 0.3s ease; letter-spacing: 0.05em; }
+
+.pay-address { font-family: 'VT323', monospace; font-size: clamp(0.9rem, 3.5vw, 1.1rem); color: #ccc; word-break: break-all; margin-bottom: 2vh; max-width: 90%; line-height: 1.3; text-align: center; }
+.pay-copy { background: transparent; border: 2px solid #39ff14; color: #39ff14; font-family: 'Press Start 2P', monospace; font-size: clamp(0.5rem, 2vw, 0.65rem); padding: 1.5vh 6vw; border-radius: 24px; cursor: pointer; margin-bottom: 1vh; transition: all 0.3s ease; letter-spacing: 0.05em; }
 .pay-copy:hover { background: #39ff14; color: #000; }
 .pay-copy.copied { background: #00ff88; border-color: #00ff88; color: #000; }
-.pay-done { font-family: 'Press Start 2P', monospace; font-size: clamp(0.55rem, 2.2vw, 0.75rem); background: #39ff14; color: #000; border: none; padding: 1.8vh 7vw; border-radius: 24px; cursor: pointer; letter-spacing: 0.05em; animation: donePulse 1.3s ease-in-out infinite; margin-top: 1vh; }
-@keyframes donePulse { 0%, 100% { box-shadow: 0 0 14px rgba(57,255,20,0.7); transform: scale(1); } 50% { box-shadow: 0 0 26px rgba(57,255,20,1), 0 0 46px rgba(57,255,20,0.6); transform: scale(1.05); } }
-.pay-hint { font-family: 'Share Tech Mono', monospace; font-size: clamp(0.85rem, 3.5vw, 1.05rem); color: #39ff14; text-shadow: 0 0 6px #39ff14; margin-bottom: 1.5vh; animation: hintBlink 1.2s ease-in-out infinite; letter-spacing: 0.05em; text-align: center; }
-@keyframes hintBlink { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
-.email-form { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.95); z-index: 260; align-items: center; justify-content: center; padding: 3vw; }
-.email-form.active { display: flex; }
-.email-box { background: #1a1a1a; border: 2px solid #39ff14; border-radius: 12px; padding: 5vw; width: 100%; max-width: min(92vw, 420px); text-align: center; box-shadow: 0 0 30px rgba(57, 255, 20, 0.4); }
-.email-box h2 { font-family: 'Press Start 2P', monospace; font-size: clamp(0.6rem, 2.6vw, 0.9rem); color: #39ff14; margin-bottom: 2.5vh; line-height: 1.6; }
-.email-box input { width: 100%; padding: 2vh 3vw; margin-bottom: 2vh; background: #0a0a0a; border: 2px solid #333; color: white; font-family: 'VT323', monospace; font-size: clamp(1rem, 4vw, 1.3rem); border-radius: 8px; }
-.email-box input:focus { border-color: #39ff14; outline: none; }
-.email-box button { width: 100%; padding: 2vh 4vw; background: #39ff14; color: #000; border: none; border-radius: 8px; font-family: 'Press Start 2P', monospace; font-size: clamp(0.55rem, 2.2vw, 0.7rem); cursor: pointer; margin-bottom: 1.5vh; }
-.email-box .cancel-btn { background: transparent; border: 2px solid #ff4444; color: #ff4444; }
+
+/* Socials */
 .socials { display: flex; gap: 5vw; align-items: center; justify-content: center; margin-bottom: 3vh; }
 .socials a { display: flex; align-items: center; justify-content: center; width: clamp(3rem, 13vw, 4.5rem); height: clamp(3rem, 13vw, 4.5rem); border-radius: 50%; background: rgba(255,255,255,0.08); border: 2px solid rgba(255,255,255,0.2); color: white; text-decoration: none; transition: all 0.3s ease; overflow: hidden; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
 .socials a svg { width: 50%; height: 50%; fill: currentColor; transition: transform 0.3s ease; }
@@ -149,76 +116,64 @@ h1 { font-family: 'Press Start 2P', monospace; font-size: clamp(1.4rem, 7vw, 2.6
     .socials a.reddit:hover { border-color: #FF4500; box-shadow: 0 0 20px #FF4500; color: #FF4500; }
     .socials a.tumblr:hover { border-color: #529ecc; box-shadow: 0 0 20px #529ecc; color: #529ecc; }
 }
-.footer { font-family: 'VT323', monospace; font-size: clamp(0.9rem, 3.5vw, 1.2rem); color: #666; text-align: center; padding: 3vh 0 1.5vh 0; letter-spacing: 0.05em; margin-top: auto; }
+
+.footer { font-family: 'VT323', monospace; font-size: clamp(0.8rem, 3vw, 1rem); color: #666; text-align: center; padding: 3vh 0 1.5vh 0; letter-spacing: 0.1em; margin-top: auto; }
+
+@media only screen and (max-width: 430px) and (-webkit-min-device-pixel-ratio: 3) {
+    .support-widget { padding: 6vw 4vw; }
+}
 </style>
 </head>
 <body>
+
     <div class="header-row">
         <img src="avatar.gif" alt="avatar" class="avatar">
         <h1>5Ner</h1>
     </div>
 
-    <div class="led-row">
-        <div class="led-marquee">
-            <div class="led-text">PLEASE READ THE RULES FOR PURCHASING DIGITAL GOODS AND THE RIGHTS TO USE THEM</div>
-        </div>
-        <div class="arrow-to-rules" onclick="openRules()">
-            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                <polygon points="2,4 8,4 8,2 14,8 8,14 8,12 2,12"/>
-            </svg>
-        </div>
-        <button class="rules-btn" onclick="openRules()">RULES</button>
-    </div>
+    <div class="support-widget">
+        <!-- Кнопка закрытия QR-кода -->
+        <button class="close-qr-btn" id="closeQrBtn" onclick="closeQr()">✕</button>
 
-    <div class="rules-panel" id="rulesPanel" onclick="closeRules(event)">
-        <div class="rules-box">
-            <h2>PURCHASE RULES</h2>
-            <p><strong>1.</strong> USDT is accepted as payment — a stable digital currency equal to 1 USD. It's safe, fast, and has almost no fees.</p>
-            <p><strong>2.</strong> Choose any network — TRON, BNB Chain, Ethereum, or Solana. We recommend TRON or BNB — fees there are only a few cents.</p>
-            <p><strong>3.</strong> Send the price shown for the artwork to the address in the pop-up window. You can scan the QR code or copy the address.</p>
-            <p><strong>4.</strong> After payment, tap "Done" and enter your email. That's all we need to send you the file.</p>
-            <p><strong>5.</strong> The artwork will be delivered to your email within 12 hours after payment.</p>
-            <p><strong>6.</strong> You receive a copy of the original artwork from the author for personal use — this means the file is for you, not for resale or public distribution.</p>
-            <p><strong>You CANNOT:</strong></p>
-            <ul>
-                <li>Resell, sublicense, or distribute the file</li>
-                <li>Upload it to stock sites, marketplaces, or public file-sharing services</li>
-                <li>Use it in commercial products, ads, or monetized content</li>
-                <li>Claim authorship or modify it for public release</li>
-                <li>Share the file with others</li>
-            </ul>
-            <p><strong>7.</strong> If you have any problem receiving the file within the stated time, write to <a href="mailto:art5ner@outlook.com" class="email-link">art5ner@outlook.com</a></p>
-            <button class="rules-close" onclick="closeRules(event)">✕ Close</button>
+        <div class="pay-title">SUPPORT THE AUTHOR</div>
+        <div class="pay-sub">Support the author with USDT:</div>
+        
+        <div class="pay-tokens">
+            <div class="pay-token tron" onclick="pickToken('tron', 'TCHMNpvqjNHA2SmpVgLuEiVVYNVe4KLQ9N', this)">
+                <img src="tron-title.png" alt="TRON">
+                <div class="lightning"></div>
+            </div>
+            <div class="pay-token bnb" onclick="pickToken('bnb', '0x507a73004d0c7c2de2ce67e26233ff87085b8716', this)">
+                <img src="bnb-title.png" alt="BNB">
+                <div class="lightning"></div>
+            </div>
+            <div class="pay-token eth" onclick="pickToken('eth', '0x507a73004d0c7c2de2ce67e26233ff87085b8716', this)">
+                <img src="eth-title.png" alt="ETH">
+                <div class="lightning"></div>
+            </div>
+            <div class="pay-token sol" onclick="pickToken('sol', '5B7hjrn9ng2ZgJfm4rUQdBvPVUAAqoY1bCeeHW54vLMC', this)">
+                <img src="sol-title.png" alt="SOL">
+                <div class="lightning"></div>
+            </div>
         </div>
-    </div>
 
-    <div class="works-carousel" id="worksCarousel">
-        <div class="work-slide active">
-            <div class="work-image-wrap"><img src="work1.gif" alt="In the Field at Night"></div>
-            <div class="work-title">IN THE FIELD AT NIGHT — 3 USDT</div>
-            <button class="work-buy-btn" onclick="openPay('In the Field at Night', 3)">Buy</button>
-        </div>
-        <div class="work-slide">
-            <div class="work-image-wrap"><img src="work2.gif" alt="Storm is Coming"></div>
-            <div class="work-title">STORM IS COMING — 5 USDT</div>
-            <button class="work-buy-btn" onclick="openPay('Storm is Coming', 5)">Buy</button>
-        </div>
-        <div class="work-slide">
-            <div class="work-image-wrap"><img src="work3.gif" alt="Storm is Coming 2"></div>
-            <div class="work-title">STORM IS COMING 2 — 4 USDT</div>
-            <button class="work-buy-btn" onclick="openPay('Storm is Coming 2', 4)">Buy</button>
-        </div>
-        <div class="work-slide">
-            <div class="work-image-wrap"><img src="work4.gif" alt="Black Hole"></div>
-            <div class="work-title">BLACK HOLE — 3 USDT</div>
-            <button class="work-buy-btn" onclick="openPay('Black Hole', 3)">Buy</button>
+        <div class="pay-qr-wrap" id="payQrWrap">
+            <div class="pay-qr">
+                <img src="tron.jpg" alt="TRON QR" class="qr-img" id="qr-tron">
+                <img src="bnb.jpg" alt="BNB QR" class="qr-img" id="qr-bnb">
+                <img src="etherium.jpg" alt="ETH QR" class="qr-img" id="qr-eth">
+                <img src="solana.jpg" alt="SOL QR" class="qr-img" id="qr-sol">
+            </div>
+            <div class="pay-address" id="payAddress"></div>
+            <button class="pay-copy" id="payCopyBtn" onclick="copyPayAddr(event)">Copy address</button>
         </div>
     </div>
 
     <div class="socials">
         <a href="https://www.instagram.com/tonysher1" target="_blank" rel="noopener" class="instagram" aria-label="Instagram">
+            <!-- Новый, чистый и рабочий SVG Instagram -->
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.5-2.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
             </svg>
         </a>
         <a href="https://www.reddit.com/u/Equivalent-Earth-872" target="_blank" rel="noopener" class="reddit" aria-label="Reddit">
@@ -233,220 +188,95 @@ h1 { font-family: 'Press Start 2P', monospace; font-size: clamp(1.4rem, 7vw, 2.6
         </a>
     </div>
 
-    <div class="footer">© 2026 5Ner. All rights reserved.</div>
-
-    <div class="pay-modal" id="payModal">
-        <div class="pay-box">
-            <button class="pay-close" onclick="closePay()">✕</button>
-            <div class="pay-title" id="payTitle">Buy "..."</div>
-            <div class="pay-sub">Choose network to send USDT:</div>
-            <div class="pay-tokens">
-                <div class="pay-token tron" onclick="pickToken('tron', 'TCHMNpvqjNHA2SmpVgLuEiVVYNVe4KLQ9N', this)">
-                    <img src="tron-title.png" alt="TRON">
-                    <div class="lightning"></div>
-                </div>
-                <div class="pay-token bnb" onclick="pickToken('bnb', '0x507a73004d0c7c2de2ce67e26233ff87085b8716', this)">
-                    <img src="bnb-title.png" alt="BNB">
-                    <div class="lightning"></div>
-                </div>
-                <div class="pay-token eth" onclick="pickToken('eth', '0x507a73004d0c7c2de2ce67e26233ff87085b8716', this)">
-                    <img src="eth-title.png" alt="ETH">
-                    <div class="lightning"></div>
-                </div>
-                <div class="pay-token sol" onclick="pickToken('sol', '5B7hjrn9ng2ZgJfm4rUQdBvPVUAAqoY1bCeeHW54vLMC', this)">
-                    <img src="sol-title.png" alt="SOL">
-                    <div class="lightning"></div>
-                </div>
-            </div>
-
-            <div class="pay-qr-wrap" id="payQrWrap">
-                <div class="pay-qr">
-                    <img src="tron.jpg" alt="TRON QR" class="qr-img" id="qr-tron">
-                    <img src="bnb.jpg" alt="BNB QR" class="qr-img" id="qr-bnb">
-                    <img src="etherium.jpg" alt="ETH QR" class="qr-img" id="qr-eth">
-                    <img src="solana.jpg" alt="SOL QR" class="qr-img" id="qr-sol">
-                </div>
-                <div class="pay-address" id="payAddress"></div>
-                <button class="pay-copy" id="payCopyBtn" onclick="copyPayAddr(event)">Copy address</button>
-                <div class="pay-hint" id="payHint">Click "Done" after payment (3 USDT)</div>
-                <button class="pay-done" onclick="payDone()">DONE</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="email-form" id="emailForm">
-        <div class="email-box">
-            <h2 id="emailTitle">Get "..."</h2>
-            <input type="email" id="buyerEmail" placeholder="Your email" required>
-            <button onclick="submitOrder()">Send Request</button>
-            <button class="cancel-btn" onclick="closeEmail()">Cancel</button>
-        </div>
-    </div>
+    <div class="footer">© 2026 5Ner</div>
 
     <script>
-        (function(){
-            var _0x1a = '7dd10b75-b44d-4fd8-89e1-e6706208ee86';
-            var _0x2b = { 'a': '#FA0B12', 'b': '#FCC703', 'c': '#2D6EFA', 'd': '#20E88B' };
-            var _0x4d = '';
-            var _0x5e = 1;
-            var _0x6f = '';
-            var _0x7g = null;
-            var _0x8h = 0;
+        var tokenColors = { 'tron': '#FA0B12', 'bnb': '#FCC703', 'eth': '#2D6EFA', 'sol': '#20E88B' };
+        var currentAddress = '';
+        var tokensNodeList = document.querySelectorAll('.pay-token');
+        var idleInterval = null;
+        var currentIdleIndex = 0;
 
-            var _0x9i = document.querySelectorAll('.work-slide');
-            var _0x0j = 0;
-            var _0x1k = null;
-
-            function _0x2l(_0x3m) {
-                _0x9i.forEach(function(_0x4n){ _0x4n.classList.remove('active'); });
-                _0x9i[_0x3m].classList.add('active');
-                _0x0j = _0x3m;
+        function startIdleAnimation() {
+            if (idleInterval) clearInterval(idleInterval);
+            
+            function flashToken() {
+                tokensNodeList.forEach(function(t) { t.classList.remove('lit', 'zap'); });
+                if (document.querySelector('.pay-token.active')) return; 
+                
+                var token = tokensNodeList[currentIdleIndex];
+                setTimeout(function(){ token.classList.add('zap'); }, 80);
+                setTimeout(function(){ token.classList.add('lit'); }, 500);
+                setTimeout(function(){ token.classList.remove('zap'); }, 1100);
+                currentIdleIndex = (currentIdleIndex + 1) % tokensNodeList.length;
             }
-            function _0x5o() {
-                _0x6p();
-                _0x1k = setInterval(function(){ _0x2l((_0x0j + 1) % _0x9i.length); }, 7000);
+            
+            flashToken();
+            idleInterval = setInterval(flashToken, 1600);
+        }
+
+        function stopIdleAnimation() {
+            if (idleInterval) {
+                clearInterval(idleInterval);
+                idleInterval = null;
             }
-            function _0x6p() {
-                if (_0x1k) { clearInterval(_0x1k); _0x1k = null; }
-            }
-            _0x5o();
+        }
 
-            window.openRules = function() { document.getElementById('rulesPanel').classList.add('active'); };
-            window.closeRules = function(_0x7q) {
-                if (_0x7q) {
-                    var _0x8r = _0x7q.target.id === 'rulesPanel';
-                    var _0x9s = _0x7q.target.classList.contains('rules-close') || _0x7q.target.closest('.rules-close');
-                    if (!_0x8r && !_0x9s) return;
-                }
-                document.getElementById('rulesPanel').classList.remove('active');
-            };
+        window.pickToken = function(network, address, element) {
+            stopIdleAnimation();
+            
+            document.getElementById('closeQrBtn').classList.add('active');
 
-            window.openPay = function(_0x0t, _0x1u) {
-                _0x6p();
-                _0x6f = _0x0t;
-                _0x5e = _0x1u;
-                document.getElementById('payTitle').innerText = 'Buy "' + _0x0t + '"';
-                document.getElementById('payHint').innerText = 'Click "Done" after payment (' + _0x1u + ' USDT)';
-                document.querySelectorAll('.pay-token').forEach(function(_0x2v){ _0x2v.classList.remove('active','lit','zap'); });
-                document.querySelectorAll('.qr-img').forEach(function(_0x3v){ _0x3v.classList.remove('active'); });
-                document.getElementById('payQrWrap').classList.remove('active');
-                document.getElementById('payModal').classList.add('active');
-                _0x3w();
-            };
+            tokensNodeList.forEach(function(t){ t.classList.remove('active','lit','zap'); });
+            element.classList.add('active', 'lit');
+            
+            currentAddress = address;
+            
+            document.querySelectorAll('.qr-img').forEach(function(img){ img.classList.remove('active'); });
+            document.getElementById('qr-' + network).classList.add('active');
+            
+            document.getElementById('payAddress').innerText = address;
+            var color = tokenColors[network];
+            
+            var copyBtn = document.getElementById('payCopyBtn');
+            copyBtn.style.borderColor = color;
+            copyBtn.style.color = color;
+            copyBtn.innerText = 'Copy address';
+            copyBtn.classList.remove('copied');
+            
+            document.getElementById('payQrWrap').classList.add('active');
+        };
 
-            function _0x3w() {
-                _0x4x();
-                var _0x5y = document.querySelectorAll('.pay-token');
-                _0x8h = 0;
-                function _0x6z() {
-                    _0x5y.forEach(function(_0x7a){ _0x7a.classList.remove('lit','zap'); });
-                    var _0x8b = _0x5y[_0x8h];
-                    setTimeout(function(){ _0x8b.classList.add('zap'); }, 80);
-                    setTimeout(function(){ _0x8b.classList.add('lit'); }, 500);
-                    setTimeout(function(){ _0x8b.classList.remove('zap'); }, 1100);
-                    _0x8h = (_0x8h + 1) % _0x5y.length;
-                }
-                _0x6z();
-                _0x7g = setInterval(_0x6z, 1600);
-            }
-            function _0x4x() {
-                if (_0x7g) { clearInterval(_0x7g); _0x7g = null; }
-            }
+        window.closeQr = function() {
+            document.getElementById('payQrWrap').classList.remove('active');
+            document.getElementById('closeQrBtn').classList.remove('active');
+            
+            tokensNodeList.forEach(function(t){ t.classList.remove('active','lit','zap'); });
+            
+            startIdleAnimation();
+        };
 
-            window.closePay = function() {
-                _0x4x();
-                document.getElementById('payModal').classList.remove('active');
-                _0x5o();
-            };
-
-            window.pickToken = function(_0x9c, _0x0d, _0x1e) {
-                _0x4x();
-                document.querySelectorAll('.pay-token').forEach(function(_0x2f){ _0x2f.classList.remove('active','lit'); });
-                _0x1e.classList.add('active','lit');
-                _0x4d = _0x0d;
-                document.querySelectorAll('.qr-img').forEach(function(_0x3v){ _0x3v.classList.remove('active'); });
-                document.getElementById('qr-' + _0x9c).classList.add('active');
-                document.getElementById('payAddress').innerText = _0x0d;
-                var _0x3g = _0x2b[_0x9c];
-                document.getElementById('payCopyBtn').style.borderColor = _0x3g;
-                document.getElementById('payCopyBtn').style.color = _0x3g;
-                document.getElementById('payCopyBtn').innerText = 'Copy address';
-                document.getElementById('payCopyBtn').classList.remove('copied');
-                document.getElementById('payQrWrap').classList.add('active');
-            };
-
-            window.copyPayAddr = function(_0x4h) {
-                _0x4h.stopPropagation();
-                var _0x5i = document.getElementById('payCopyBtn');
-                navigator.clipboard.writeText(_0x4d).then(function(){
-                    _0x5i.innerText = '✅ Copied!';
-                    _0x5i.classList.add('copied');
-                    setTimeout(function(){ _0x5i.innerText = 'Copy address'; _0x5i.classList.remove('copied'); }, 2000);
-                }).catch(function(){ alert('Address: ' + _0x4d); });
-            };
-
-            window.payDone = function() {
-                _0x4x();
-                document.getElementById('payModal').classList.remove('active');
-                document.getElementById('emailTitle').innerText = 'Get "' + _0x6f + '"';
-                document.getElementById('emailForm').classList.add('active');
-            };
-
-            window.closeEmail = function() {
-                document.getElementById('emailForm').classList.remove('active');
-                document.getElementById('buyerEmail').value = '';
-                _0x5o();
-            };
-
-            window.submitOrder = function() {
-                var _0x6j = document.getElementById('buyerEmail').value;
-                if (!_0x6j || _0x6j.indexOf('@') === -1) {
-                    alert('Please enter a valid email');
-                    return;
-                }
-                var _0x7k = document.querySelector('#emailForm .email-box button:first-of-type');
-                _0x7k.innerText = 'SENDING...';
-                _0x7k.disabled = true;
-                var _0x8l = new FormData();
-                _0x8l.append('access_key', _0x1a);
-                _0x8l.append('subject', 'New order: ' + _0x6f);
-                _0x8l.append('from_name', '5Ner Store');
-                _0x8l.append('Work', _0x6f);
-                _0x8l.append('Price', _0x5e + ' USDT');
-                _0x8l.append('Buyer Email', _0x6j);
-                fetch('https://api.web3forms.com/submit', { method: 'POST', body: _0x8l })
-                .then(function(_0x9m){ return _0x9m.json(); })
-                .then(function(_0x0n){
-                    if (_0x0n.success) {
-                        alert('Thank you! The author will send you the file soon.');
-                        window.closeEmail();
-                    } else {
-                        alert('Error: ' + (_0x0n.message || 'Something went wrong'));
-                        _0x7k.innerText = 'Send Request';
-                        _0x7k.disabled = false;
-                    }
-                })
-                .catch(function(_0x1o){
-                    alert('Connection error. Please try again.');
-                    console.error(_0x1o);
-                    _0x7k.innerText = 'Send Request';
-                    _0x7k.disabled = false;
-                });
-            };
-
-            document.addEventListener('keydown', function(_0x2p){
-                if (_0x2p.key === 'Escape') {
-                    window.closePay();
-                    document.getElementById('emailForm').classList.remove('active');
-                    document.getElementById('rulesPanel').classList.remove('active');
-                }
+        window.copyPayAddr = function(event) {
+            event.stopPropagation();
+            var btn = document.getElementById('payCopyBtn');
+            navigator.clipboard.writeText(currentAddress).then(function(){
+                btn.innerText = '✅ Copied!';
+                btn.classList.add('copied');
+                setTimeout(function(){ 
+                    btn.innerText = 'Copy address'; 
+                    btn.classList.remove('copied'); 
+                }, 2000);
+            }).catch(function(){ 
+                alert('Address: ' + currentAddress); 
             });
+        };
 
-            document.addEventListener('contextmenu', function(e){ e.preventDefault(); });
-            document.addEventListener('dragstart', function(e){ e.preventDefault(); });
-            document.addEventListener('selectstart', function(e){ e.preventDefault(); });
-            document.addEventListener('copy', function(e){ e.preventDefault(); });
-        })();
+        window.addEventListener('DOMContentLoaded', function() {
+            startIdleAnimation();
+        });
+
+        document.addEventListener('contextmenu', function(e){ e.preventDefault(); });
+        document.addEventListener('dragstart', function(e){ e.preventDefault(); });
     </script>
 </body>
 </html>
